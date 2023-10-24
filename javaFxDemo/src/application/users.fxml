@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.users">
+   <children>
+      <Label layoutX="40.0" layoutY="39.0" prefHeight="28.0" prefWidth="291.0" text="User Management System" textFill="#d96c05">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox fx:id="lblId" layoutX="34.0" layoutY="88.0" prefHeight="148.0" prefWidth="100.0" spacing="22.0">
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" prefWidth="39.0" text="NAME">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAge" text="AGE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCity" text="CITY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="140.0" layoutY="88.0" prefHeight="138.0" prefWidth="172.0" spacing="15.0">
+         <children>
+            <TextField fx:id="txtId" disable="true"/>
+            <TextField fx:id="txtName" />
+            <TextField fx:id="txtAge" />
+            <TextField fx:id="txtCity" />
+         </children>
+      </VBox>
+      <Button fx:id="btnSave" layoutX="55.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnSaveClicked" prefHeight="26.0" prefWidth="58.0" text="Save" />
+      <Button fx:id="btnUpdate" layoutX="119.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnUpdateClicked" prefHeight="26.0" prefWidth="58.0" text="Update" />
+      <Button fx:id="btnDelete" layoutX="186.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnDeleteClicked" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+      <Button fx:id="btnClear" layoutX="253.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnClearClicked" prefHeight="26.0" prefWidth="58.0" text="Clear" />
+      <TableView fx:id="table" layoutX="383.0" layoutY="87.0" onMouseClicked="#tableClicked" prefHeight="381.0" prefWidth="394.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="86.4000244140625" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="128.79998779296875" text="NAME" />
+            <TableColumn fx:id="colAge" prefWidth="68.800048828125" text="AGE" />
+            <TableColumn fx:id="colCity" prefWidth="110.39996337890625" text="CITY" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
